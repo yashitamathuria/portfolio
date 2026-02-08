@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        
+
+       
+    :root {
+        --primary: #2563eb;
+        --secondary: #1e40af;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --accent: #e0e7ff;
+        --radius: 14px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+        color: var(--text);
+        line-height: 1.7;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 40px;
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    header {
+        text-align: center;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #e5e7eb;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 6px;
+    }
+
+    header p {
+        font-size: 1.1rem;
+        color: var(--muted);
+    }
+
+    section {
+        margin-bottom: 35px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 12px;
+    }
+
+    section h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 4px;
+        height: 70%;
+        background: var(--primary);
+        border-radius: 2px;
+    }
+
+    p {
+        color: var(--text);
+        font-size: 1rem;
+    }
+
+    ul {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+        color: var(--text);
+    }
+
+    
+    /* Profile Photo */
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #01091b;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.35);
+}
+#cal{
+    text-decoration : none;
+}
+
+    /* Skills */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .skills span {
+        background: var(--accent);
+        color: var(--primary);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        cursor: default;
+    }
+
+    .skills span:hover {
+        background: var(--primary);
+        color: #fff;
+        transform: translateY(-3px);
+    }
+
+    /* Projects */
+    .project {
+        background: #f9fafb;
+        padding: 18px 20px;
+        border-radius: var(--radius);
+        margin-bottom: 18px;
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+    }
+
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        border-color: var(--primary);
+    }
+
+    .project strong {
+        display: block;
+        font-size: 1.1rem;
+        color: var(--secondary);
+        margin-bottom: 6px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding-top: 25px;
+        border-top: 2px solid #e5e7eb;
+        font-size: 0.95rem;
+        color: var(--muted);
+    }
+
+    footer a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: var(--secondary);
+        text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+            margin: 20px;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+        }
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    
+    <header>
+        <div class="profile-photo">
+    <img src="me.jpeg" alt="Profile Photo">
+</div>
+        <h1>Yashita Mathuria</h1>
+        
+        <p>Student | Aspiring Software Engineer</p>
+        <p>📍 India | 📧 yashitamathuria@gmail.com</p>
+        
+    </header>
+
+    
+    <section>
+        <h2>About Me</h2>
+        <p>
+            I am a motivated student with a strong foundation in programming,
+            and logical problem-solving. I enjoy learning
+            how hardware and software work together and aim to build efficient,
+            reliable solutions to real-world problems.
+        </p>
+    </section>
+
+    
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span>C</span>
+            <span>Python</span>
+            <span>Data Structures (Basics)</span>
+            <span>Logic Gates</span>
+            <span>Number Systems</span>
+            <span>Problem Solving</span>
+        </div>
+    </section>
+
+    
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project">
+            <strong>Responsive Calculator using HTML, CSS and Javascript </strong>
+            <ul>
+                <li>Implemented core functionality with real time result display</li>
+                <li>Ensure proper input validation and error handling for reliable calculation</li>
+            </ul>
+            <a id="cal" href="calculator.html">View</a>
+        </div>
+
+        <div class="project">
+            <strong>Water Tank Level Detection Using ESP8266</strong>
+            <ul>
+                <li>Optimized system for low power consumption</li>
+                <li>Enable wifi connectivity to send water level data to a mobile interface</li>
+            </ul>
+        </div>
+
+        
+    </section>
+
+    <!-- Education -->
+    <section>
+        <h2>Education</h2>
+        <p>
+            <strong>Undergraduate Student</strong><br>
+            Branch: Computer Science and Data Science<br>
+            Subjects: Digital Electronics, C Programming, Python, Data Structures
+        </p>
+    </section>
+
+    <!-- Strengths -->
+    <section>
+        <h2>Strengths</h2>
+        <ul>
+            <li>Strong logical and analytical thinking</li>
+            <li>Quick learner with curiosity for fundamentals</li>
+            <li>Consistent practice and discipline</li>
+        </ul>
+    </section>
+
+    <!-- Career Objective -->
+    <section>
+        <h2>Career Objective</h2>
+        <p>
+            A passionate student eager to start a professional career by applying technical skills, learning new technologies and contributing to impactful projects.
+        </p>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer>
+        <p>
+            GitHub: <a href="https://github.com/yashitamathuria">https://github.com/yashitamathuria</a> |
+            LinkedIn: <a href="https://www.linkedin.com/in/yashita-mathuria-44b315398/">https://www.linkedin.com/in/yashita-mathuria-44b315398/</a>
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
